@@ -1,0 +1,36 @@
+{
+  "name": "puppeteer-mocha-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate to setup unit tests with puppeteer and mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-runner.js",
+    "test:browser": "node test-runner.js browser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpaulo/puppeteer-mocha-boilerplate.git"
+  },
+  "keywords": [
+    "puppeteer",
+    "mocha",
+    "tests"
+  ],
+  "author": "Vitor Rodigues <vitorpaulorodrigues@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vpaulo/puppeteer-mocha-boilerplate/issues"
+  },
+  "homepage": "https://github.com/vpaulo/puppeteer-mocha-boilerplate#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "opener": "^1.5.1",
+    "puppeteer": "^5.2.1",
+    "testdouble": "^3.16.1"
+  },
+  "dependencies": {
+    "fastify": "^3.2.0",
+    "fastify-static": "^3.2.0"
+  }
+}

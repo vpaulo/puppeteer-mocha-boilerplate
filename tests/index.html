@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests</title>
+
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/testdouble/dist/testdouble.js"></script>
+    <script src="./utils.js"></script>
+</head>
+<body style="margin: 0;">
+    <div id="mocha"></div>
+    <div class="tst__content"></div>
+    <script>
+        mocha.ui('bdd');
+        const expect = chai.expect;
+    </script>
+    <script type="module" src="./suites.js"></script>
+    <script type="module" src="./setup.js"></script>
+</body>
+</html>
