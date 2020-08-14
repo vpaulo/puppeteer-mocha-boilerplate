@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 const opener = require('opener');
+const coverage = require('./tests/coverage');
 
 const port = process.env.PORT || 3000;
 const myArgs = process.argv.slice(2)[0];
@@ -77,7 +78,7 @@ fastify.listen(port, async (err) => {
             if (msg.text() === 'Tests ended') {
                 // Disable Javascript coverage
                 const jsCoverage = await page.coverage.stopJSCoverage();
-                // coverage(jsCoverage); // TODO coverage if nyc does not work
+                coverage(jsCoverage);
                 closeApp();
             } else if (msg.text().startsWith('Tests failures')) {
                 fails = parseInt(msg.text().replace('Tests failures: ', ''));
